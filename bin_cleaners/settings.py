@@ -11,6 +11,9 @@ https://docs.djangoproject.com/en/5.2/ref/settings/
 """
 
 from pathlib import Path
+import os
+from dotenv import load_dotenv
+load_dotenv()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -54,7 +57,7 @@ ROOT_URLCONF = 'bin_cleaners.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR / 'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -74,8 +77,12 @@ WSGI_APPLICATION = 'bin_cleaners.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': os.getenv('DATABASE_URL').split('/')[-1],
+        'USER': os.getenv('DATABASE_URL').split('//')[1].split(':')[0],
+        'PASSWORD': os.getenv('DATABASE_URL').split(':')[2].split('@')[0],
+        'HOST': 'localhost',
+        'PORT': '5432',
     }
 }
 
