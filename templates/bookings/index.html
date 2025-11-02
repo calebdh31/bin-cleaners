@@ -1,0 +1,7 @@
+<h1>My Bookings</h1>
+
+{% for booking in bookings %}
+  <p>{{ booking.service_type }} — {{ booking.scheduled_date }}</p>
+{% empty %}
+  <p>No bookings yet.</p>
+{% endfor %}
