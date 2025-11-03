@@ -8,13 +8,15 @@ from django.contrib.auth.forms import UserCreationForm
 from .models import Booking
 from .forms import BookingForm
 from django.urls import reverse_lazy
+from django.contrib.auth.decorators import login_required
+from django.contrib.auth.mixins import LoginRequiredMixin
 
 
 def user_bookings(request):
     bookings = Booking.objects.filter(user=request.user)
     return render(request, 'bookings/index.html', {'bookings': bookings})
 
-class BookingCreate(CreateView):
+class BookingCreate(LoginRequiredMixin, CreateView):
     model = Booking
     form_class = BookingForm
     template_name = 'bookings/booking_form.html'
@@ -24,13 +26,13 @@ class BookingCreate(CreateView):
         form.instance.user = self.request.user
         return super().form_valid(form)
     
-class BookingUpdate(UpdateView):
+class BookingUpdate(LoginRequiredMixin, UpdateView):
     model = Booking
     form_class = BookingForm
     template_name = 'bookings/booking_form.html'
     success_url = reverse_lazy('user_bookings')
 
-class BookingDelete(DeleteView):
+class BookingDelete(LoginRequiredMixin, DeleteView):
     model = Booking
     success_url = reverse_lazy('user_bookings')
     template_name = 'bookings/booking_confirm_delete.html'
