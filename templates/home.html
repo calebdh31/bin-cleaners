@@ -1,4 +1,12 @@
 {% extends 'base.html' %}
 {% block content %}
-  <p>Welcome to Bin Cleaners!</p>
+  <h1>Welcome, {{ user.username }}!</h1>
+  <p>What would you like to do today?</p>
+
+  <a href="{% url 'new_booking' %}">Book a Cleaning</a><br>
+  <a href="{% url 'user_bookings' %}">View My Bookings</a><br>
+  <form action="{% url 'logout' %}" method="post" style="display:inline;">
+  {% csrf_token %}
+  <button type="submit">Logout</button>
+  </form>
 {% endblock %}
