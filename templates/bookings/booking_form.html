@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block content %}
+  <h1>Book a Bin Cleaning</h1>
+
+  <form method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Submit Booking</button>
+  </form>
+
+  <a href="{% url 'user_bookings' %}">Back to My Bookings</a>
+{% endblock %}

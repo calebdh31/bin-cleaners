@@ -1,7 +1,11 @@
 <h1>My Bookings</h1>
 
 {% for booking in bookings %}
-  <p>{{ booking.service_type }} — {{ booking.scheduled_date }}</p>
+  <p>
+    {{ booking.service_type }} — {{ booking.scheduled_date }}
+    <a href="{% url 'update_booking' booking.id %}">Edit</a>
+    <a href="{% url 'delete_booking' booking.id %}">Cancel Booking</a>
+  </p>
 {% empty %}
   <p>No bookings yet.</p>
 {% endfor %}

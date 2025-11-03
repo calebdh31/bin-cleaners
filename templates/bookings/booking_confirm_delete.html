@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>Delete Booking</h1>
+  <p>Are you sure you want to delete your booking for <strong>{{ object.service_type }} {{ object.date }}</strong>?</p>
+
+  <form method="post">
+    {% csrf_token %}
+    <button type="submit">Confirm Delete</button>
+    <a href="{% url 'user_bookings' %}">Cancel</a>
+  </form>
+{% endblock %}
