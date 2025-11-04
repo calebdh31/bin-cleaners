@@ -1,22 +1,32 @@
-/* TEMPLATE TO BE EDITED */
-
 body {
-  font-family: Arial, sans-serif;
   margin: 0;
+  font-family: 'Inter', sans-serif;
+  background-color: #f7f8fa;
   padding: 0;
+  color: #333;
 }
 
 header {
-  background-color: #228b22;
+  background-color: #239423;
   color: white;
   padding: 1rem;
   text-align: center;
 }
 
+nav {
+  background-color: #2b2d42;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+
 nav a {
-  color: white;
-  margin: 0 10px;
+  color: #fff;
   text-decoration: none;
+  margin: 0 1rem;
+  font-weight: 500;
 }
 
 nav a:hover {
@@ -24,7 +34,12 @@ nav a:hover {
 }
 
 main {
-  padding: 1.5rem;
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 1rem;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
 }
 
 .navbar {
@@ -48,4 +63,118 @@ main {
 .navbar button:hover,
 .navbar a:hover {
     color: #008cba;
+}
+
+button {
+  background-color: #2b2d42;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+button:hover {
+  background-color: #4c5270;
+}
+
+.booking-item span {
+  font-weight: 600;
+  color: #2b2d42;
+  background: #edf2f4;
+  padding: 0.2rem 0.4rem;
+  border-radius: 4px;
+}
+
+span {
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+}
+
+span:contains("Scheduled") {
+  background-color: #fffae5;
+  color: #b48a00;
+}
+
+span:contains("Completed") {
+  background-color: #eaffea;
+  color: #006600;
+}
+
+.dashboard-container {
+  width: 80%;
+  margin: 2rem auto;
+  background: #fff;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.scroll-box {
+  max-height: 400px;
+  overflow-y: scroll;
+  border-top: 1px solid #ddd;
+  padding-top: 1rem;
+}
+
+.booking-card {
+  border-bottom: 1px solid #eee;
+  padding: 10px 0;
+}
+
+.booking-card:last-child {
+  border-bottom: none;
+}
+.landing-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+  width: 70%;
+  margin: 4rem auto;
+  padding: 2rem 3rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.landing-container h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 0.5rem;
+}
+
+.landing-container p {
+  color: #333;
+  max-width: 300px;
+}
+
+.auth-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.auth-links .btn {
+  background-color: #2b2d42;
+  color: #fff;
+  text-decoration: none;
+  padding: 0.8rem 1.6rem;
+  border-radius: 6px;
+  font-weight: 500;
+  transition: background-color 0.2s ease;
+}
+
+.auth-links .btn:hover {
+  background-color: #4c5270;
+}
+
+.auth-links .admin-btn {
+  background-color: #555;
+  padding: 0.5;
+}
+
+.auth-links .admin-btn:hover {
+  background-color: #333;
 }

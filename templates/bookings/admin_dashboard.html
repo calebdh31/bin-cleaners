@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>Admin Dashboard</h1>
+  <div class="dashboard-container">
+    <div class="scroll-box">
+      {% for booking in bookings %}
+        <div class="booking-card">
+          <p><strong>{{ booking.user.username }}</strong></p>
+          <p>{{ booking.service_type }} — {{ booking.date }}</p>
+          <p>Status: <span>{{ booking.status }}</span></p>
+          <p>Address: {{ booking.address }}</p>
+        </div>
+      {% empty %}
+        <p>No bookings found.</p>
+      {% endfor %}
+    </div>
+  </div>
+{% endblock %}

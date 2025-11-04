@@ -11,7 +11,7 @@ from django.urls import reverse_lazy
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
 
-
+@login_required
 def user_bookings(request):
     bookings = Booking.objects.filter(user=request.user)
     return render(request, 'bookings/index.html', {'bookings': bookings})
