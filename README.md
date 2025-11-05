@@ -42,8 +42,8 @@ It was built to simulate a small service-based business app with both **user** a
 - 🔑 User authentication and session management
 - 📅 Book a cleaning (date, address, service type)
 - ✏️ Edit or cancel existing bookings
-- 🧑‍💼 Admin-only dashboard for managing all bookings
-- 🖥️ Clean, modern UI styled with custom CSS
+- 🧑‍💼 Admin-only dashboard for managing all bookings(django built-in for now)
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -60,6 +60,38 @@ It was built to simulate a small service-based business app with both **user** a
 - [Render (Deployment)](https://render.com/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## 📈 Roadmap
+
+- ✅ User authentication  
+- ✅ CRUD for bookings  
+- ✅ Admin dashboard  
+- ✅ Conditional access for admin vs users  
+- ✅ Responsive UI  
+- 🚧 Email notifications for bookings *(coming soon)*  
+- 🚧 Payment integration (Stripe) *(planned)*  
+- 🚧 Recurring bookings *(planned)*
+- 🚧 Employee and Admin fleshed out instances and dashboards *(planned)*  
+
+
+See the [open issues](https://github.com/yourusername/bin-cleaners/issues) for more ideas and future improvements.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+---
+
+## 🙏 Acknowledgments
+
+Resources and tools that made this project possible:
+
+- [Bootstrap Docs](https://getbootstrap.com/docs/)  
+- [Flaticon Icons](https://www.flaticon.com/)  
+- [Coolors Palette Generator](https://coolors.co/)  
+- [Best README Template](https://github.com/theamazingmrb/Best-README-Template)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
 
 ---
 
@@ -99,14 +131,6 @@ To run this project locally:
     http://localhost:8000/
 
 ### 🧭 Planning & Resources
-
-**Wireframe**
-
-<img src="static/img/wireframe.png" width="600" alt="Wireframe">
-
-**ERD Diagram**
-
-<img src="static/img/erd.png" width="600" alt="ERD">
 
 **Trello Board**
 
