@@ -2,9 +2,9 @@ body {
   margin: 0;
   font-family: 'Inter', sans-serif;
   background-color: #f7f8fa;
-  padding: 0;
   color: #333;
 }
+
 
 header {
   background-color: #239423;
@@ -13,25 +13,31 @@ header {
   text-align: center;
 }
 
-nav {
-  background-color: #2b2d42;
-  color: #fff;
+.navbar {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 2rem;
+  justify-content: center;
+  gap: 1.5rem;
+  background-color: #f3f3f3;
+  padding: 1rem;
+  border-bottom: 1px solid #ccc;
 }
 
-nav a {
-  color: #fff;
+.navbar a, 
+.navbar button {
   text-decoration: none;
-  margin: 0 1rem;
+  background: none;
+  border: none;
+  color: #333;
+  font-size: 1rem;
+  cursor: pointer;
   font-weight: 500;
 }
 
-nav a:hover {
-  text-decoration: underline;
+.navbar a:hover,
+.navbar button:hover {
+  color: #0d6efd;
 }
+
 
 main {
   max-width: 800px;
@@ -39,66 +45,70 @@ main {
   padding: 1rem;
   background: #fff;
   border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
 
-.navbar {
-    display: flex;
-    justify-content: center;
-    gap: 1.5rem;
-    background-color: #f3f3f3;
-    padding: 1rem;
-    border-bottom: 1px solid #ccc;
-}
 
-.navbar a, .navbar button {
-    text-decoration: none;
-    background: none;
-    border: none;
-    color: #333;
-    font-size: 1rem;
-    cursor: pointer;
-}
-
-.navbar button:hover,
-.navbar a:hover {
-    color: #008cba;
-}
-
-button {
-  background-color: #2b2d42;
+button,
+.btn {
+  background-color: #212529;
   color: #fff;
   border: none;
-  padding: 0.5rem 1rem;
-  border-radius: 4px;
+  padding: 0.7rem 1.4rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 500;
   cursor: pointer;
-}
-button:hover {
-  background-color: #4c5270;
+  transition: background-color 0.2s ease;
 }
 
-.booking-item span {
-  font-weight: 600;
-  color: #2b2d42;
-  background: #edf2f4;
-  padding: 0.2rem 0.4rem;
-  border-radius: 4px;
+button:hover,
+.btn:hover {
+  background-color: #0d6efd;
 }
 
-span {
-  padding: 0.2rem 0.5rem;
-  border-radius: 4px;
+.admin-btn {
+  background-color: #555;
 }
 
-span:contains("Scheduled") {
-  background-color: #fffae5;
-  color: #b48a00;
+.admin-btn:hover {
+  background-color: #333;
 }
 
-span:contains("Completed") {
-  background-color: #eaffea;
-  color: #006600;
+
+.landing-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #fff;
+  width: 70%;
+  margin: 4rem auto;
+  padding: 3rem 3rem 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
 }
+
+.landing-content h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 0.5rem;
+}
+
+.landing-content p {
+  color: #555;
+  max-width: 400px;
+  margin: 0 auto 2rem;
+}
+
+.auth-links {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
 
 .dashboard-container {
   width: 80%;
@@ -111,7 +121,7 @@ span:contains("Completed") {
 
 .scroll-box {
   max-height: 400px;
-  overflow-y: scroll;
+  overflow-y: auto;
   border-top: 1px solid #ddd;
   padding-top: 1rem;
 }
@@ -124,57 +134,149 @@ span:contains("Completed") {
 .booking-card:last-child {
   border-bottom: none;
 }
-.landing-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background: #fff;
-  width: 70%;
-  margin: 4rem auto;
-  padding: 2rem 3rem;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+
+
+.booking-item span {
+  font-weight: 600;
+  color: #2b2d42;
+  background: #edf2f4;
+  padding: 0.2rem 0.4rem;
+  border-radius: 4px;
 }
 
-.landing-container h1 {
-  font-size: 2rem;
+
+.home-container {
+  background: #fff;
+  width: 60%;
+  margin: 4rem auto;
+  padding: 2.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.home-container h1 {
+  font-size: 1.8rem;
   font-weight: 700;
-  color: #1a1a1a;
   margin-bottom: 0.5rem;
 }
 
-.landing-container p {
-  color: #333;
-  max-width: 300px;
+.home-container p {
+  color: #555;
+  margin-bottom: 1.5rem;
 }
 
-.auth-links {
+
+.home-links {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  justify-content: center;
   gap: 1rem;
-  margin-top: 2rem;
+  margin-bottom: 1.5rem;
 }
 
-.auth-links .btn {
+.home-links a.btn {
   background-color: #2b2d42;
   color: #fff;
-  text-decoration: none;
-  padding: 0.8rem 1.6rem;
+  padding: 0.7rem 1.4rem;
   border-radius: 6px;
+  text-decoration: none !important;
   font-weight: 500;
   transition: background-color 0.2s ease;
 }
 
-.auth-links .btn:hover {
-  background-color: #4c5270;
+.home-links a.btn:hover {
+  background-color: #0d6efd;
 }
 
-.auth-links .admin-btn {
+
+.logout-btn {
   background-color: #555;
-  padding: 0.5;
 }
 
-.auth-links .admin-btn:hover {
+.logout-btn:hover {
   background-color: #333;
+}
+
+
+a.btn {
+  background-color: #2b2d42 !important;
+  color: #fff !important;
+  padding: 0.7rem 1.4rem !important;
+  border-radius: 6px;
+  text-decoration: none !important;
+  font-weight: 500;
+  transition: all 0.25s ease;
+  display: inline-block;
+}
+
+a.btn:hover {
+  background-color: #0d6efd !important;
+  transform: scale(1.03);
+}
+
+
+.btn {
+  background-color: #2b2d42;
+  color: #fff;
+  border: none;
+  padding: 0.7rem 1.4rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 500;
+  display: inline-block;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.btn:hover {
+  background-color: #239423; 
+  color: #fff;
+  transform: scale(1.03);
+}
+
+
+.back-btn {
+  background-color: #555;
+  margin-top: 1rem;
+}
+
+.back-btn:hover {
+  background-color: #333;
+}
+
+
+.btn {
+  background-color: #2b2d42;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 500;
+  display: inline-block;
+  margin-left: 0.5rem;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.edit-btn {
+  background-color: #239423;
+}
+
+.edit-btn:hover {
+  background-color: #1b751b;
+  transform: scale(1.05);
+}
+
+.cancel-btn {
+  background-color: #8b0000;
+}
+
+.cancel-btn:hover {
+  background-color: #a30000;
+  transform: scale(1.05);
+}
+
+.booking-item {
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #ddd;
 }

@@ -21,4 +21,6 @@ def home(request):
     return render(request, 'home.html')
 
 def landing(request):
+    if request.user.is_authenticated:
+        return redirect('user_bookings')
     return render(request, 'landing.html')

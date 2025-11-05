@@ -13,7 +13,16 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 
 @login_required
 def user_bookings(request):
-    bookings = Booking.objects.filter(user=request.user)
+    if request.user.is_superuser:
+        bookings = Booking.objects.all()
+        return render(request, 'bookings/index.html', {'bookings': bookings})
+    else:
+        bookings = Booking.objects.filter(user=request.user)
+        return render(request, 'bookings/index.html', {'bookings': bookings})
+    
+@login_required
+def admin_bookings(request):
+    bookings = Booking.objects.filter()
     return render(request, 'bookings/index.html', {'bookings': bookings})
 
 class BookingCreate(LoginRequiredMixin, CreateView):

@@ -1,13 +1,16 @@
 {% extends 'base.html' %}
-{% block content %}
-  <div class="landing-container">
-    <h1>Welcome to Bin Cleaners</h1>
-    <p>Book your next bin cleaning in seconds.</p>
 
-    <div class="auth-links">
-      <a class="btn" href="{% url 'login' %}">Login</a>
-      <a class="btn" href="{% url 'signup' %}">Sign Up</a>
-      <a class="btn admin-btn" href="/admin/">Admin Login<a>
-    </div>
+{% block content %}
+<div class="landing-container">
+  <div class="landing-content">
+    <h2>♻️ Welcome to Bin Cleaners 🚛</h2>
+    <p>Book your next bin cleaning in seconds</p>
   </div>
+
+  <div class="auth-links">
+    <a class="btn" href="{% url 'login' %}">Login</a>
+    <a class="btn" href="{% url 'signup' %}">Sign Up</a>
+    <a class="btn admin-btn" href="/admin/">Admin Login</a>
+  </div>
+</div>
 {% endblock %}

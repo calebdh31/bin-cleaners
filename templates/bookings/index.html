@@ -4,12 +4,12 @@
 
 {% for booking in bookings %}
   <div class="booking_item">
-  <p>
-    <strong>{{ booking.service_type }}</strong> — {{ booking.date }} <br>
-  Status: <span>{{ booking.status }}</span>
-    <a href="{% url 'update_booking' booking.id %}">Edit</a>
-    <a href="{% url 'delete_booking' booking.id %}">Cancel Booking</a>
-  </p>
+<p>
+  <strong>{{ booking.service_type }}</strong> — {{ booking.scheduled_date|date:"M. d, Y" }}<br>
+  Status: {{ booking.status }}
+  <a href="{% url 'update_booking' booking.id %}" class="btn edit-btn">Edit</a>
+  <a href="{% url 'delete_booking' booking.id %}" class="btn cancel-btn">Cancel Booking</a>
+</p>
   </div>
 {% empty %}
   <p>No bookings yet.</p>

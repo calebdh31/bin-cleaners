@@ -1,12 +1,18 @@
 {% extends 'base.html' %}
-{% block content %}
-  <h1>Welcome, {{ user.username }}!</h1>
-  <p>What would you like to do today?</p>
 
-  <a href="{% url 'new_booking' %}">Book a Cleaning</a><br>
-  <a href="{% url 'user_bookings' %}">View My Bookings</a><br>
-  <form action="{% url 'logout' %}" method="post" style="display:inline;">
-  {% csrf_token %}
-  <button type="submit">Logout</button>
+{% block content %}
+<div class="home-container">
+  <h1>Welcome, {{ user.username }}!</h1>
+  <p>We're glad to see you!</p>
+
+  <div class="home-links">
+    <a href="{% url 'new_booking' %}" class="btn">Book a Cleaning</a>
+    <a href="{% url 'user_bookings' %}" class="btn">View My Bookings</a>
+  </div>
+
+  <form action="{% url 'logout' %}" method="post">
+    {% csrf_token %}
+    <button type="submit" class="btn logout-btn">Logout</button>
   </form>
+</div>
 {% endblock %}
