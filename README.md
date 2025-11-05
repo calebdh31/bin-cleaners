@@ -98,9 +98,19 @@ To run this project locally:
 # 7. Open the app in your browser
     http://localhost:8000/
 
-# Planning & Resources
-    Wireframe: wireframe.png
-    ERD Diagram: erd.png
-    Trello Board: [https://trello.com/b/yourboardlink](https://trello.com/b/C5abx5Yj/unit-4-project-ga-bin-cleaners)
+### 🧭 Planning & Resources
+
+**Wireframe**
+
+![Wireframe](static/img/wireframe.png)
+
+**ERD Diagram**
+
+![ERD Diagram](static/img/erd.png)
+
+**Trello Board**
+
+[View Trello Board](https://trello.com/b/C5abx5Yj/unit-4-project-ga-bin-cleaners)
+
     
 
