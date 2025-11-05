@@ -106,11 +106,11 @@ To run this project locally:
 
 ### Installation
 
-1. Clone the repo  
-   ```bash
-   git clone https://github.com/yourusername/bin-cleaners.git
-   cd bin-cleaners
-
+# 1. Clone the repo 
+    ```bash
+     git clone https://github.com/yourusername/bin-cleaners.git
+     cd bin-cleaners
+     
 # 2. Create and activate a virtual environment
     python3 -m venv venv
     source venv/bin/activate
