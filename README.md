@@ -102,11 +102,11 @@ To run this project locally:
 
 **Wireframe**
 
-![Wireframe](static/img/wireframe.png)
+<img src="static/img/wireframe.png" width="600" alt="Wireframe">
 
 **ERD Diagram**
 
-![ERD Diagram](static/img/erd.png)
+<img src="static/img/erd.png" width="600" alt="ERD">
 
 **Trello Board**
 
