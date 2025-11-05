@@ -78,3 +78,29 @@ To run this project locally:
    ```bash
    git clone https://github.com/yourusername/bin-cleaners.git
    cd bin-cleaners
+
+# 2. Create and activate a virtual environment
+    python3 -m venv venv
+    source venv/bin/activate
+    
+# 3. Install dependencies
+    pip install -r requirements.txt
+
+# 4. Apply database migrations
+    python manage.py migrate
+
+# 5. Create a superuser (for admin access)
+    python manage.py createsuperuser
+
+# 6. Run the development server
+    python manage.py runserver
+
+# 7. Open the app in your browser
+    http://localhost:8000/
+
+# Planning & Resources
+    Wireframe: wireframe.png
+    ERD Diagram: erd.png
+    Trello Board: [https://trello.com/b/yourboardlink](https://trello.com/b/C5abx5Yj/unit-4-project-ga-bin-cleaners)
+    
+
